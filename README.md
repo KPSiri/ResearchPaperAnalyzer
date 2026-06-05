@@ -2,7 +2,8 @@
 
 An interactive CLI tool that finds, curates, and comparatively analyses academic papers on any research topic — powered by **Google Gemini** and orchestrated with **LangGraph**.
 
-![PaperAnalyzer output](output1.png)(output2.png)
+![PaperAnalyzer output 1](output1.png)
+![PaperAnalyzer output 2](output2.png)
 
 ---
 
