@@ -12,11 +12,21 @@ An interactive CLI tool that finds, curates, and comparatively analyses academic
 4. If you haven't selected 5 yet, it searches again — excluding papers you've already seen.
 5. Once 5 papers are selected, it generates a structured comparative analysis: key findings, tech stacks, advantages, and disadvantages for each paper.
 
-![PaperAnalyzer output 1](output1.png)
-![PaperAnalyzer output 2](output2.png)
+![Paper selection — picking from search results](output1.png)
+![Comparative analysis — results table](output2.png)
 
 ---
 
+## Streamlit Web App (`app.py`)
+
+`app.py` is a full Streamlit UI that replaces the terminal prompts with an interactive browser interface. It reuses the same agents and prompts as the CLI but manages state via `st.session_state` and Streamlit's rerun cycle rather than the LangGraph graph.
+
+### Screenshots
+
+![Paper selection — picking from search results](output3.png)
+![Comparative analysis — results table and breakdown](output4.png)
+
+---
 ## Agents
 
 | Agent | File | Role |
