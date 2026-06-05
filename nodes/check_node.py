@@ -44,8 +44,12 @@ def route_after_check(state: PaperState) -> str:
         "analyse" — proceed to analyse_node
     """
     selected = state.get("selected_papers", [])
-
+    
+    search_round = state.get("search_round", 0)
     if len(selected) >= 5:
+        return "analyse"
+    elif search_round >= 10:
+        print("   ⚠ Max search rounds reached.")
         return "analyse"
     else:
         return "search"

@@ -51,7 +51,17 @@ def analyse_papers(papers: list[dict]) -> dict:
 
     # Call Gemini
     response = llm.invoke(prompt)
-    raw_text = response.content.strip()
+    #raw_text = response.content.strip()
+
+    content = response.content
+    if isinstance(content, list):
+        raw_text = "".join(
+        block if isinstance(block, str) else block.get("text", "")
+        for block in content
+        )
+    else:
+        raw_text = content
+        raw_text = raw_text.strip()
 
     # Clean up markdown fencing if present
     if raw_text.startswith("```"):
