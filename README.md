@@ -42,8 +42,8 @@ The pipeline is a `StateGraph` with a built-in loop:
 
 ```
 search → present → check ──► analyse → END
-             ▲          │
-             └──────────┘ (if < 5 papers selected)
+    ▲                 │
+    └─────────────────┘ (if < 5 papers selected)
 ```
 
 | Node | File | Role |
